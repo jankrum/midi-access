@@ -14,7 +14,7 @@ Simple MIDIAccess Object getter for the WebMIDI API.
 import midiAccess from 'midi-access'
 
 if (midiAccess) {
-    const outputs = midiAccess.outputs.values()
+    const outputs = Array.from(midiAccess.outputs.values())
     console.log('MIDI outputs:', outputs)
 } else {
     console.error('No MIDI access')
