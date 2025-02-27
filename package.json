@@ -1,6 +1,6 @@
 {
   "name": "midi-access",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "MIDI access object",
   "main": "index.mjs",
   "scripts": {

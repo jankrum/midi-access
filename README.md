@@ -1,19 +1,23 @@
 # midi-access
+
 Simple MIDIAccess Object getter for the WebMIDI API.
 
 ## Description
-* This is currently under development
-* The default imported object is a simple way of getting MIDI access or gracefully dealing with failed permissions
-* Access object will be either a [MIDIAccess object](https://developer.mozilla.org/en-US/docs/Web/API/MIDIAccess) or `null`
+
+-   The default imported object is a simple way of getting MIDI access or gracefully dealing with failed permissions
+-   Access object will be either a [MIDIAccess object](https://developer.mozilla.org/en-US/docs/Web/API/MIDIAccess) or `null`
+-   Named export `hasMidiAccess` is a boolean representing whether or not we were able to get MIDI access
 
 ## Installation
-    npm install midi-access -g
+
+    npm install midi-access -D
 
 ## Usage
-```javascript
-import midiAccess from 'midi-access'
 
-if (midiAccess) {
+```javascript
+import midiAccess, { hasMidiAccess } from 'midi-access'
+
+if (hasMidiAccess) {
     const outputs = Array.from(midiAccess.outputs.values())
     console.log('MIDI outputs:', outputs)
 } else {
@@ -22,5 +26,5 @@ if (midiAccess) {
 ```
 
 ## To-do
-* Switch to Typescript
-* Implement refresh method
+
+-   Implement refresh method
